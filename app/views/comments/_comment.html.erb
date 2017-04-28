@@ -1,0 +1,17 @@
+<p>
+	<strong>Commenter:</strong>
+    <%= comment.commenter %>
+</p>
+
+<p>
+    <strong>Commento:</strong>
+    <%= comment.body %>
+</p>
+
+<p>
+
+ 	<%= button_to 'Elimina', [comment.article, comment],
+ 				method: :delete,
+ 				data: { confirm: 'Are you sure?' },
+ 				class: 'btn color-4 material-design' %>
+</p>

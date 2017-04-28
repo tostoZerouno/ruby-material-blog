@@ -1,0 +1,30 @@
+<h1>Listing articles</h1>
+
+<%= button_to 'nuovo articolo', new_article_path, 
+  class: 'btn color-1 material-design', method: :get  %>
+
+<% @articles.each do |article| %>
+  <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text"><%= article.title %></h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <%= article.text %>
+    </div>
+    <table align="center">
+      <tr>
+
+      <td><%= button_to 'apri', article_path(article), class: 'btn color-1 small material-design', method: :get %></td>
+      <td><%= button_to 'modifica', edit_article_path(article), class: 'btn color-1 small material-design', method: :get %></td>
+      <td><%= button_to 'elimina', article_path(article), class: 'btn color-4 small material-design', 
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    </table>
+    <div class="mdl-card__menu">
+      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+        <i class="material-icons">share</i>
+      </button>
+    </div>
+  </div>
+<% end -%>

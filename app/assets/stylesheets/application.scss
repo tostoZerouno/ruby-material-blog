@@ -1,0 +1,162 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "material";
+
+
+* {
+  box-sizing: border-box;
+  outline: none;
+
+
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+body {
+  font-family: 'Open Sans';
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+h1 {
+  color: #666666;
+  font-size: 2rem;
+  line-height: 1.5em;
+  margin:2em 0 2em 0;
+}
+
+$color1: #426FC5;
+$color2: #00897b;
+$color3: #f6774f;
+$color4: #e94043;
+
+.box {
+  margin: 1rem;
+  width: 18.75rem;
+  
+  img {
+    width: 100%;
+  }
+}
+
+.btn {
+  @extend .mdl-button;
+  border: none;
+  color: white;
+  overflow: hidden;
+  margin: 1rem;
+  padding: 0;
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px;
+
+  &.color-1 {
+    background-color: $color1;
+  }
+  
+  &.color-2 {
+    background-color: $color2;
+  }
+  
+  &.color-3 {
+    background-color: $color3;
+  }
+  
+  &.color-4 {
+    background-color: $color4;
+  }
+
+  &.small {
+    width: 100px;
+    height: 30px;
+  }
+}
+
+.btn-border {
+  
+  &.color-1 {
+    background-color: transparent;
+    border: 2px solid $color1;
+    color: $color1;
+  }
+  
+  &.color-2 {
+    background-color: transparent;
+    border: 2px solid $color2;
+    color: $color2;
+  }
+  
+  &.color-3 {
+    background-color: transparent;
+    border: 2px solid $color3;
+    color: $color3;
+  }
+  
+  &.color-4 {
+    background-color: transparent;
+    border: 2px solid $color4;
+    color: $color4;
+  }
+}
+
+.btn-round {
+  border-radius: 10em;
+}
+
+.material-design {
+  position: relative;
+  
+  canvas {
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.container {
+  align-content: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 46rem;
+}
+
+.demo-card-wide.mdl-card {
+  margin: auto;
+  width: 512px;
+  margin-bottom: 10px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: $color1;
+  text-transform: capitalize;
+  height: 176px;
+  background: #C5CAE9 center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: $color1;
+}
+
+.mdl-textfield__input {
+  background: #C5CAE9;
+  margin: auto;
+  width: 80%;
+}

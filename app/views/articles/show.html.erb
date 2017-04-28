@@ -1,0 +1,24 @@
+<p>
+  <strong>Titolo:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Testo:</strong>
+  <%= @article.text %>
+</p>
+ 
+<h2>Commenti</h2>
+<%= render @article.comments %>
+ 
+<h2>Aggiungi un commento:</h2>
+<%= render 'comments/form' %>
+ 
+<table align='center'>
+	<tr>
+	<td><%= button_to 'Modifica', edit_article_path(@article), 
+		class: 'btn color-1 material-design', method: :get  %></td>
+	<td><%= button_to 'Indietro', articles_path, 
+		class: 'btn color-1 material-design', method: :get  %></td>
+	</tr>
+</table>
